@@ -21,6 +21,19 @@ git --version
  git init
  ```
 
-  ```bash
+* Para ver el estado de nuestros cambios
+
+```bash
  git status
+ ```
+
+ * Agrega archvios a la memoria de la pc
+
+```bash
+ git add .
+ ```
+
+* Crea el registro de los cambios realizados
+```bash
+ git commit -m "comentario"
  ```
