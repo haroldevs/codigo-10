@@ -20,3 +20,7 @@ git --version
  ```bash
  git init
  ```
+
+  ```bash
+ git status
+ ```
