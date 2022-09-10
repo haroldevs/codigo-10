@@ -5,18 +5,16 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Inicio</title>
-    <style type="text/css">
-        img {box-shadow: 1px 1px 7px #999;}
-    </style>
+    <link rel="stylesheet" href="./css/styles.css">
 </head>
 <body>
     <header>
-        <h1 align="center">Apple.com</h1>
+        <h1>Apple.com</h1>
         <hr>
     </header>
     <main>
         <section>
-            <div>
+            <div id="div_temas">
                 <h4>Temas</h4>
                 <ul>
                     <li>
@@ -29,7 +27,7 @@
             </div>
         </section>
         <section>
-            <table style="text-align: center; " align="center">
+            <table class="tablita" >
                 <thead>
                 <tr>
                     <td><h2>iphone 13</h2>
@@ -64,9 +62,49 @@
             </table>
             
         </section>
+        <h1 class="titulo">
+            Samsung.com
+        </h1>
+        <h1 id="titulo_huawei">
+            Huawei.com
+        </h1>
+        <h2>Jerarquia de CSS:</h2>
+        <h4>Solo aplica de diversos metodos se intenta diversos valores...</h4>
+        <table class="big_table">
+            <tr>
+                <th class="bt_th">Método</th>
+                <th class="bt_th">Simbolo</th>
+                <th class="bt_th">Peso</th>
+            </tr>
+            <tr>
+                <td>Selector de elemento</td>
+                <td>elemento</td>
+                <td>1</td>
+            </tr>
+            <tr>
+                <td>Selector de clase</td>
+                <td>.class_Name</td>
+                <td>2</td>
+            </tr>
+            <tr>
+                <td>Selector de atributo</td>
+                <td>selector[atributo]</td>
+                <td>3</td>
+            </tr>
+            <tr>
+                <td>Selector de ID</td>
+                <td>#id</td>
+                <td>4</td>
+            </tr>
+            <tr>
+                <td>html style</td>
+                <td>style=""</td>
+                <td>5</td>
+            </tr>
+        </table>
         <footer>
             <hr>
-            <h2 style="font-size: 11px; position: absolute; bottom: 0; text-align: center; width: 99.45%;">Derechos compartidos &#169</h2>
+            <h2 style=" display: block; font-size: 11px; bottom: 0; text-align: center; ">Derechos compartidos &#169</h2>
         </footer>
     </main>
 </body>
