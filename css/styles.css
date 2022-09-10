@@ -156,3 +156,52 @@ h2{
     color: rgb(6, 43, 6);
     text-align: right;
 }
+
+/*Formulario*/
+
+.div_form{
+    width: 400px;
+    margin: 20px auto;   
+}
+
+.div_form  input{
+    height: 40px;
+    border-radius: 20px;
+    width: 50%;
+    padding-left: 20px;
+    padding-right: 20px;
+    font-size: 20px;
+    border: 1px solid #ccc;
+    outline: none;
+}
+
+.div_form > form > input:focus{
+    border: 1px solid blue;
+}
+
+.div_form > form > button{
+    height: 40px;
+    border: 1px solid #ccc;
+    border-radius: 20px;
+    width: 32%;
+    outline: none;
+}
+
+.div_form > form > button:hover{
+    height: 40px;
+    border: 1 px solid #666;
+    border-radius: 20px;
+}
+
+.div_form > form > button:focus{
+    border: 2px solid red;
+}
+
+
+.price::before{
+    content: "$ ";
+}
+
+.price::after{
+    content: ".00";
+}
