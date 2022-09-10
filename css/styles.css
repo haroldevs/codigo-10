@@ -5,6 +5,17 @@ body{
     display: block;
 }
 
+ul{
+    padding-left: 4rem;
+    list-style: none;
+}
+li{
+
+    text-decoration: none;
+}
+
+
+
 img {
     box-shadow: 1px 1px 7px #999;
     width: 80%;
@@ -21,13 +32,17 @@ h1{
 
 .tituloapple{
     font-size: 30px;
+    background: rgb(176,166,166);
+    background: linear-gradient(90deg, rgba(176,166,166,1) 0%, rgba(37,37,36,1) 35%, rgba(171,162,162,1) 100%);
+    margin-left: 1.5%;
+    margin-right: 1.5%;
 }
 
 h2{
     text-align: center;
     color: #FFFFFF;
-    background-color: rgb(139, 139, 139);
-    border-radius: 25px;
+    border-radius: 10px;
+    padding: 1.6rem;
 }
 
 .tablita{
@@ -85,4 +100,59 @@ h2{
 .big_table td{
     text-align: left;
     padding-left: 10%;
+}
+
+.productos2, .productos1{
+    margin-top: 2.5rem;
+    text-align: center;
+}
+
+.product_cell{
+    text-align: center;
+    box-shadow: 1px 1px 7px #999;
+    width: 80%;
+    padding: 3rem; 
+    margin: 20px;
+    width: 270px ;
+    display: inline-block;
+    vertical-align: middle;
+    
+
+}
+
+
+.product_cell:hover{
+    width: 350px;
+    cursor: grab;
+}
+
+.product_cell img:hover{
+    opacity: 0.8;
+    
+}
+
+.laptop > h3 {
+    color: blue;
+}
+.laptop > h4 {
+    color:cadetblue;
+    text-align: center;
+}
+
+.celular > h3 {
+    color: red;
+    
+}
+.celular > h4{
+    color: rgb(75, 8, 8);
+    text-align: left;
+}
+
+.auricular > h3{
+    color: green;
+}
+
+.auricular > h4{
+    color: rgb(6, 43, 6);
+    text-align: right;
 }
