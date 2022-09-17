@@ -8,7 +8,9 @@ body{
     display: block;
     padding-right: 4rem;
 }
-
+.elh4{
+    padding-left: 5rem;
+}
 ul{
     list-style: none;
 }
@@ -24,7 +26,7 @@ li{
     border-radius: 10px;
     display: flex;
     justify-content: center;
-    margin: 10px;
+    margin: 8px;
 }
 .letra{
     color: white;
@@ -238,6 +240,7 @@ h2{
         display: inline-block;
         margin-left: 2%;
         padding: 15px;
+
     }
     .letra{
         padding-left: 20px;
