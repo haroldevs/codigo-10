@@ -1,21 +1,96 @@
 body{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+    
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1600 900'%3E%3Cdefs%3E%3ClinearGradient id='a' x1='0' x2='0' y1='1' y2='0' gradientTransform='rotate(117,0.5,0.5)'%3E%3Cstop offset='0' stop-color='%230FF'/%3E%3Cstop offset='1' stop-color='%23CF6'/%3E%3C/linearGradient%3E%3ClinearGradient id='b' x1='0' x2='0' y1='0' y2='1' gradientTransform='rotate(144,0.5,0.5)'%3E%3Cstop offset='0' stop-color='%23F00'/%3E%3Cstop offset='1' stop-color='%23FC0'/%3E%3C/linearGradient%3E%3C/defs%3E%3Cg fill='%23FFF' fill-opacity='0' stroke-miterlimit='10'%3E%3Cg stroke='url(%23a)' stroke-width='5.609999999999999'%3E%3Cpath transform='translate(-21.35 3.2) rotate(1.55 1409 581) scale(1.001901)' d='M1409 581 1450.35 511 1490 581z'/%3E%3Ccircle stroke-width='1.87' transform='translate(-18.5 14) rotate(2.6999999999999997 800 450) scale(1.004994)' cx='500' cy='100' r='40'/%3E%3Cpath transform='translate(7.800000000000001 -28.5) rotate(25.5 401 736) scale(1.004994)' d='M400.86 735.5h-83.73c0-23.12 18.74-41.87 41.87-41.87S400.86 712.38 400.86 735.5z'/%3E%3C/g%3E%3Cg stroke='url(%23b)' stroke-width='1.7'%3E%3Cpath transform='translate(84 -2.6000000000000005) rotate(0.6500000000000001 150 345) scale(0.9919669999999999)' d='M149.8 345.2 118.4 389.8 149.8 434.4 181.2 389.8z'/%3E%3Crect stroke-width='3.74' transform='translate(-39.5 -36.5) rotate(28.8 1089 759)' x='1039' y='709' width='100' height='100'/%3E%3Cpath transform='translate(-67.2 20.8) rotate(4.8 1400 132) scale(0.985)' d='M1426.8 132.4 1405.7 168.8 1363.7 168.8 1342.7 132.4 1363.7 96 1405.7 96z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+    background-attachment: fixed;
+    background-size: cover;
     font-family: Arial, Helvetica, sans-serif;
+    background-color: rgb(21, 21, 21);
+    display: flex;
+    height: 100vh;
+    width: 100vw;
+    justify-content: center;
+    align-items: center;
 }
 
+h1 {
+    font-size: 70px;
+    color: #ffc107;
+    font-family: "Arial Black", Gadget, sans-serif;
+    text-shadow: 0px 0px 0 rgb(250, 188, 2), 1px 1px 0 rgb(245, 183, 0),
+      2px 2px 0 rgb(240, 178, 0), 3px 3px 0 rgb(235, 173, 0),
+      4px 4px 0 rgb(230, 168, 0), 5px 5px 0 rgb(225, 163, 0),
+      6px 6px 0 rgb(220, 158, 0), 7px 7px 0 rgb(215, 153, 0),
+      8px 8px 0 rgb(210, 148, 0), 9px 9px 0 rgb(205, 143, 0),
+      10px 10px 0 rgb(200, 138, 0), 11px 11px 10px rgba(0, 0, 0, 0.6),
+      11px 11px 1px rgba(0, 0, 0, 0.5), 0px 0px 10px rgba(0, 0, 0, 0.2);
+
+    animation-duration: 6s;
+    animation-name: screen-saver;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+  }
 
 /* Animar a p */
 p{
     /* partes de animacion */
     /* Tiempo */
-    animation-duration: 4s;
+    animation-duration: 3s;
     /* nombre de la animacion (para enlazar el tag con el keyframes)*/
     animation-name: primera-animacion;
-    
+    /* Cantidad de veces que haga la animacion */
+    animation-iteration-count: infinite ;
+
+    animation-direction: alternate;
+
 }
 
 @keyframes primera-animacion {
+    /* aca estan los fotograma */
     
+    /* inicio de la animacion */
+    /* from{
+        margin-left: 70%;
+    }
+    to{
+        margin-right: 80%;
+        color: red;
+        font-size: 30px;
+        font-weight: 900;
+        
+    } */
 }
+
+@keyframes screen-saver {
+    from{
+        margin-left: 70%;
+    }
+  
+    to {
+        right: 0;
+    }
+  
+    /* porcentajes de fotogramas */
+    10% {
+      margin-top: 300px;
+    }
+  
+    30% {
+      margin-top: -300px;
+    }
+  
+    50% {
+      margin-top: 300px;
+    }
+  
+    70% {
+      margin-top: -300px;
+    }
+  
+    90% {
+      margin-top: 300px;
+    }
+  
+    100% {
+      margin-top: 0;
+    }
+  }
