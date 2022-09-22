@@ -1,0 +1,21 @@
+body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+
+/* Animar a p */
+p{
+    /* partes de animacion */
+    /* Tiempo */
+    animation-duration: 4s;
+    /* nombre de la animacion (para enlazar el tag con el keyframes)*/
+    animation-name: primera-animacion;
+    
+}
+
+@keyframes primera-animacion {
+    
+}
