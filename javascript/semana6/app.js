@@ -34,3 +34,4 @@ nombre.addEventListener("keyup",function(evento_keyup){
         p.innerHTML=text
     })
 })
+
