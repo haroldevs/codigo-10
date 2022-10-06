@@ -18,7 +18,7 @@ function crearPersona() {
 		capital_name: function () {
 			return (
 				this.upper_name().substring(0, 1) +
-				this.name.substring(1, this.name.lenght)
+				this.name.substring(1, this.name.length)
 			);
 		},
 	};
@@ -45,7 +45,7 @@ function crearPersonas() {
 		capital_name: function () {
 			return (
 				this.upper_name().substring(0, 1) +
-				this.name.substring(1, this.name.lenght)
+				this.name.substring(1, this.name.length)
 			);
 		},
 	};
@@ -66,7 +66,7 @@ function crearPersonas() {
 		capital_name: function () {
 			return (
 				this.upper_name().substring(0, 1) +
-				this.name.substring(1, this.name.lenght)
+				this.name.substring(1, this.name.length)
 			);
 		},
 	};
@@ -87,7 +87,7 @@ function crearPersonas() {
 		capital_name: function () {
 			return (
 				this.upper_name().substring(0, 1) +
-				this.name.substring(1, this.name.lenght)
+				this.name.substring(1, this.name.length)
 			);
 		},
 	};
@@ -148,4 +148,52 @@ function crearPersonasCustom(){
     // personas.push(persona3)
 
     console.log(personas)
+}
+
+function notificacion(){
+    window.alert("soy una notificacion")
+    console.log(window.location.host)
+    console.log(window.location.pathname)
+    console.log(window.innerHeight)
+    console.log(window.innerWidth)
+    console.log(window.history)
+
+    // crear un popup
+    // window.open("variables.html","variablesTab","popup")
+}
+
+function goVariables(){
+    window.location.href="variables.html"
+}
+
+
+function edadMinima(){
+	let edadMinima=100
+	// personas.forEach((persona)=> {
+		
+	// 	if(persona.years<edadMinima){
+	// 		edadMinima=persona.years
+	// 	}
+	// })
+	personas.forEach((persona)=> {
+		edadMinima= Math.min(edadMinima,persona.years)
+	})	
+	console.log(edadMinima)
+}
+
+function buscarPersonaNombre(){
+	const term= prompt("Ingresa el nombre a buscar: ")
+
+	let persona_match
+
+	personas.forEach((persona)=>{
+		if(persona.name===term)
+		persona_match=persona
+	})
+	console.log(persona_match)
+
+	//ahora con find
+
+	const persona_find=personas.find((persona)=>persona.name===term)
+	console.log(persona_find)
 }
