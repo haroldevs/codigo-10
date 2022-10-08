@@ -27,6 +27,7 @@ function readMovies(listPeliculas=movies.entries){
       </div>
       `
     })
+    
 }
 
 readMovies()
