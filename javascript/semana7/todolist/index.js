@@ -37,12 +37,74 @@ function destroy(id){
     arrayTasks=filterTask
     Task.destroyRender(id);
 }
+// Edit v1
+// function edit(id){
+//     const newText=prompt("Ingresa el nuevo nombre de la tarea")
+
+//     //find solo retorna 1 elemento
+//     const oneTask=arrayTasks.find((task)=>task._id===id)
+
+//     // cuando un if ejecuta 1 linea se puede evitar las llaves
+//     if(oneTask===undefined) return
+
+//     oneTask._name=newText
+//     oneTask._status=2
+//     Task.updateRender(id,newText)
+// }
 
 function edit(id){
-    const newText=prompt("Ingresa el nuevo nombre de la tarea")
+    const element=document.querySelector(`#task-name-${id}`)
+    element.style.display="none"
 
-    //find solo retorna 1 elemento
-    const oneTask=arrayTasks.find((task)=>task._id===id)
-    oneTask._name=newText
-    console.log(arrayTasks)
+    //para crear elementos tipo nodo usamos 
+    //funcion createElement
+
+    const container=document.createElement('div') //<div></div>
+    container.id=`task-edit-${id}`
+    container.style.display="flex"
+    container.style.gap="5px"
+    const input = document.createElement('input') // <input type="text" placeholder=""/>
+    input.id=`task-edit-${id}`
+    
+    //create element input type text
+    input.type="text"
+    input.placeholder="Ingresa el nuevo nombre"
+
+    const button=document.createElement('button') //<button>Save </button>
+    button.textContent="Save"
+    button.style.backgroundColor="#ccc"
+    button.onclick=function(){
+        if(input.value===""){
+            alert("Debe escribir un nombre")
+            return
+        }
+        //update a nivel array
+
+        const oneTask=arrayTasks.find((task)=>task._id===id)
+        oneTask._name=input.value
+
+        //update a nivel visual
+        element.textContent=input.value
+        element.style.display="block"
+        container.remove()
+    }
+
+    const buttonCancel=document.createElement("button") //<button>Cancel</button>
+    buttonCancel.textContent="Cancel"
+    buttonCancel.style.backgroundColor="#ccc"
+    buttonCancel.onclick=function(){
+        container.remove()
+        element.style.display="block"
+    }
+
+
+    container.appendChild(input) // <div> <input type="text" placeholder=""/> </div>
+    container.appendChild(button) // <div> <input type="text" placeholder=""/> //<button>Save </button> </div>
+    container.appendChild(buttonCancel)  // <div> <input type="text" placeholder=""/> //<button>Save </button>  <button>Cancel</button></div>
+
+    //recordar element es el h6 y poner el container al costado
+    //parentNode.insertBefore= coloca el container antes del h6
+    // element.nextSibling=cambia la posicion a despues del h6
+    element.parentNode.insertBefore(container,element.nextSibling)
 }
+
