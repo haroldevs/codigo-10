@@ -1,8 +1,11 @@
+//import { response } from "express"
 
 
 const inputTask=document.querySelector(".input__task")
 const btnCreate=document.querySelector(".btn__create")
 const listTask=document.querySelector(".container__list__task")
+
+const url_todoapi='http://localhost:4000'
 
 //arreglo vacio
 
@@ -21,16 +24,53 @@ btnCreate.onclick=function(){
 
     }
     const task=new Task(arrayTasks.length+1,taskText,new Date(),1)
+
+    //Descomentar para comunicarse con el servidor todoapi
+    /*
+    fetch(url_todoapi + "/puerta", {
+		method: "POST",
+		headers: {
+			"Content-Type": "application/json",
+		},
+		body: JSON.stringify(task),
+	}).then((response) => {
+		if (response.ok) {
+			fetch(url_todoapi + "/tasks")
+				.then((res) => res.json())
+				.then((data_json) => {
+					console.log(data_json.tasks);
+					data_json.tasks.forEach((tarea) => {
+						const objTarea = new Task(
+							tarea._id,
+							tarea._name,
+							tarea._date,
+							tarea._status
+						);
+						listTask.innerHTML += objTarea.render();
+                })
+            })
+        }
+    })
+    */
+
     arrayTasks.push(task)
     listTask.innerHTML+=task.render()
 
     inputTask.value=""
+    inputTask.focus()
 }
+
+//agregamos el listener para el evento de presionar enter en el input
+inputTask.addEventListener("keyup",(event)=>{
+    if(event.key==="Enter"){
+        btnCreate.click()
+    }
+})
 
 function destroy(id){
     //eliminar un elemento de un array
     //en la condicion podemos decir que traiga elementos nenos el que tenga
-    //FIlter retorna un arrary
+    //Filter retorna un array
 
     const filterTask=arrayTasks.filter((task)=>task._id!==id)
     //el valor de arrayTaks es filterTask
