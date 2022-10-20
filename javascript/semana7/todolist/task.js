@@ -44,7 +44,7 @@ class Task{
     render(){
         return `
             <div id="task-${this._id}" class="item__task">
-                <input type="checkbox" />
+                <input type="checkbox" class="check" />
                 <h6 id="task-name-${this._id}">${this._name}</h6>
                 <button onclick="edit(${this._id})">
                     <img src="./images/edit.png" width="15" alt="">

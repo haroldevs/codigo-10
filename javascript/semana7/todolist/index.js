@@ -5,6 +5,8 @@ const inputTask=document.querySelector(".input__task")
 const btnCreate=document.querySelector(".btn__create")
 const listTask=document.querySelector(".container__list__task")
 
+const check=document.querySelector(".check")
+
 const url_todoapi='http://localhost:4000'
 
 //arreglo vacio
