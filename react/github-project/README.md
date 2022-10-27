@@ -52,3 +52,65 @@ function MyCard(){
 }
 
 ```
+
+## useState
+
+En react para almacenar un valor en una variable usamos hook llamado useState
+useState es una funcion que permite manejar el estado de una variable
+
+- Como se usa useState
+
+- Siempre los import de react van en la primera fila
+
+```js
+import {useState} from "react"
+
+
+
+
+
+function App(){
+    //useState nos retorna un arreglo con dos valores
+    //el primer valor es el valor de la variable "Juan"
+    //el segundo valor es una funcion que permite cambiar el valor
+
+    const  [nombre,setNombre]=useState("Juan")
+
+    //nombre="Pepe"  .esto no se puede hacer
+    //setNombre("Pepe") .Esto si se puede hacer
+
+    //Si queremos cambiar el valor de una variable
+    //tenemos que llamar a la funcion setNombre
+
+    return (
+        <div>
+            <p>Nombre {nombre}</p>
+            <button onClick={()=>setNombre("Pepe")}>Cambiar nombre</button>
+        </div>
+
+    )
+}
+```
+
+## onChange para Inputs
+
+- En react para poder manejar el valor de un input usamos el evento onChange, este permite captar cada vez que el usuario escriba en el input
+
+```js
+function App() {
+  const [inputText,setInputText]=useState("")
+
+  function handleInputChange(event){
+    //cambiar el valor de una variable inputtEXT
+    //si queremos obtener lo que el usuario escribio
+    //usamos event.target.value
+  }
+  return (
+    <div>
+        <p>Nombre{nombre}</p>
+        <input type="text" onChange={handleInputChange}/>
+    </div>
+
+  )
+
+```

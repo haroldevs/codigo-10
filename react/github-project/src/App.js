@@ -1,47 +1,62 @@
+import { useState } from 'react';
 import './App.css';
-import Header from "./components/Header"
+import hotel from "./assets/icons/hotel.png"
+import link from "./assets/icons/link.png"
+import pin from "./assets/icons/pin.png"
+import search from "./assets/icons/search.png"
+import sun from "./assets/icons/sun.png"
+import twitter from "./assets/icons/twitter.png"
+import octocat from "./assets/icons/Octocat.png"
+
 
 function App() {
+  const [inputText,setInputText]=useState("")
 
-  function saludar(){
-    console.log("Hola mundo")
+  function handleInputChange(event){
+    setInputText(event.target.value)
   }
 
-  return ( 
-    <div class="container">
-      <div class="section-1">
-        <h4 class="title">devfinder</h4>
-        <button class="btn-mode">
-          LIGHT <img width="20" src="./image/sun.png" alt="" />
+  function searchUser(){
+    console.log(inputText)
+  }
+
+  return (
+    <div className="container">
+      <div className="section-1">
+        <h4 className="title">devfinder</h4>
+        <button className="btn-mode">
+          LIGHT <img width="20" src={sun} alt="" />
         </button>
       </div>
-      <div class="search-container">
-        <div class="input-container">
-          <img width="15" src="./image/search.png" alt="" />
+      <div className="search-container">
+        <div className="input-container">
+          <img width="15" src={search} alt="" />
           <input
-            class="input-search"
+            value={inputText}
+            onChange={handleInputChange}
+            className="input-search"
             type="text"
             placeholder="Search GitHub username..." autocomplete="off" id="usergithub"
           />
         </div>
         <div>
-          <button class="btn-search" id="btn-search">Search</button>
+          <button className="btn-search" onClick={searchUser} id="btn-search">Search</button>
         </div>
       </div>
-      <div class="information-container" id="container">
-        <div class="image-container" id="imagen">
-          <img width="100" src="https://avatars.githubusercontent.com/u/583231?v=4" alt="" />
+      <div className="information-container" id="container">
+        <div className="image-container" id="imagen">
+          <img width="100" src={octocat} alt="" />
         </div>
-        <div class="description-container">
-          <div class="user-date-container" >
+        <div className="description-container">
+          <div className="user-date-container" >
             <h2 id="name">The Octocat</h2>
             <p id="created-at">Joined 25 Jun 2011</p>
           </div>
-          <div class="user-bio-container">
+          <div className="user-bio-container">
             <p id="login">@octocat</p>
             <p id="bio">This profile has no bio</p>
           </div>
-          <div class="card-information">
+          <div className="card-information">
             <div>
               <h5>Repos</h5>
               <h2 id="public_repos">8</h2>
@@ -55,25 +70,25 @@ function App() {
               <h2 id="following">9</h2>
             </div>
           </div>
-          <div class="info-container">
+          <div className="info-container">
             <div>
               <p id="location">
-                <img width="15" src="./image/pin.png" alt="" />&nbsp;
+                <img width="15" src={pin} alt="" />&nbsp;
                 San Francisco
               </p>
               <p id="blog">
-                <img width="15" src="./image/link.png" alt="" />&nbsp;
+                <img width="15" src={link} alt="" />&nbsp;
                 https://github.blog
               </p>
             </div>
             <div>
               <p id="twitter_username">
-                <img width="15" src="./image/twitter.png" alt="" />&nbsp;
+                <img width="15" src={twitter} alt="" />&nbsp;
                 Not Available
               </p>
 
               <p id="company">
-                <img width="15" src="./image/hotel.png" alt=""/>&nbsp;
+                <img width="15" src={hotel} alt="" />&nbsp;
                 @github
               </p>
             </div>
@@ -81,7 +96,7 @@ function App() {
         </div>
       </div>
     </div>
-    
+
   );
 }
 
