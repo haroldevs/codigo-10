@@ -44,12 +44,12 @@ class Task{
     render(){
         return `
             <div id="task-${this._id}" class="item__task">
-                <input type="checkbox" class="check" />
+                <input type="checkbox" id="task-check-${this._id}" onclick="check(${this._id})" />
                 <h6 id="task-name-${this._id}">${this._name}</h6>
-                <button onclick="edit(${this._id})">
+                <button id="task-edit-${this._id}" onclick="edit(${this._id})">
                     <img src="./images/edit.png" width="15" alt="">
                 </button>
-                <button onclick="destroy(${this._id})">
+                <button id="task-destroy-${this._id}" onclick="destroy(${this._id})">
                     <img src="./images/delete.png" width="15" alt="">
                 </button>
             </div>

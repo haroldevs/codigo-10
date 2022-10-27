@@ -1,11 +1,8 @@
-//import { response } from "express"
-
 
 const inputTask=document.querySelector(".input__task")
 const btnCreate=document.querySelector(".btn__create")
 const listTask=document.querySelector(".container__list__task")
 
-const check=document.querySelector(".check")
 
 const url_todoapi='http://localhost:4000'
 
@@ -68,6 +65,9 @@ inputTask.addEventListener("keyup",(event)=>{
         btnCreate.click()
     }
 })
+
+
+
 
 function destroy(id){
     //eliminar un elemento de un array
@@ -148,5 +148,5 @@ function edit(id){
     //parentNode.insertBefore= coloca el container antes del h6
     // element.nextSibling=cambia la posicion a despues del h6
     element.parentNode.insertBefore(container,element.nextSibling)
-}
 
+}

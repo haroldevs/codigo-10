@@ -21,12 +21,13 @@ app.get("/tasks",(req,res)=>{
 })
 
 //Post: para enviar datos al servidor
-app.post("/puerta",(req,res)=>{
+app.post("/task",(req,res)=>{
     const task=req.body
     tasks.push(task)
     //le voy a responder al cliente
-    res.json({
-        message:"ok"
+    res.status(201).json({
+        message:"ok",
+        task
     })
 })
 
